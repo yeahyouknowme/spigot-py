@@ -21,9 +21,12 @@ def spigot(digit):
             ans = divmod(spigotArray[i], (i+2))
             spigotArray[i] = int(ans[1])
             spigotArray[i-1] += int(ans[0])
-        drip = int(spigotArray[0]) // 2
-        spigotArray[0] = spigotArray[0] % 2
-        print(drip)
+        
+        # drip[0] is the nth digit of euler's number
+        drip = divmod(spigotArray[0], 2)
+        spigotArray[0] = int(drip[1])
+        
+        print(drip[0])
 
 
         
