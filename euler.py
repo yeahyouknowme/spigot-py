@@ -13,21 +13,19 @@ def spigot(digit):
         ## SINGLE STEP THROUGH ALGHORITHM ##
         spigotArray = spigotArray * 10
         # loop through array #
-        print(spigotArray[0])
         for i in range(digit-1, 0, -1):
             ans = divmod(spigotArray[i], (i+2))
 
             spigotArray[i] = int(ans[1])
             spigotArray[i-1] += int(ans[0])
-        print(spigotArray[0])
-       # drip = int(spigotArray[0]) // 2
+        drip = int(spigotArray[0]) // 2
         spigotArray[0] = spigotArray[0] % 2
-        #print(drip)
+        print(drip)
 
 
         
 
-spigot(9)
+spigot(10)
 
 
 
