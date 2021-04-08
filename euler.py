@@ -1,15 +1,15 @@
 import numpy as np
 
 
-def spigot(digit):
+def saleSpigot(digit):
     
     # initialize array
     spigotArray = np.array([])
     for x in range(digit+1):
-        spigotArray = np.append(spigotArray, int(1))
+        spigotArray = np.append(spigotArray, 1)
 
     # print digits of euler's number 
-    for n in range(0, digit, 1):
+    for n in range(digit):
 
         spigotArray = spigotArray * 10
 
@@ -25,13 +25,12 @@ def spigot(digit):
         # drip[0] is the nth digit of euler's number
         drip = divmod(spigotArray[0], 2)
         spigotArray[0] = int(drip[1])
-        
         print(drip[0])
 
 
         
 
-spigot(10)
+saleSpigot(10)
 
 
 
