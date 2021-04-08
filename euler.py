@@ -19,12 +19,12 @@ def saleSpigot(digit):
         # set cur item to remainder
         for i in range(digit, 0, -1):
             ans = divmod(spigotArray[i], (i+2))
-            spigotArray[i] = int(ans[1])
-            spigotArray[i-1] += int(ans[0])
+            spigotArray[i] = ans[1]
+            spigotArray[i-1] += ans[0]
         
         # drip[0] is the nth digit of euler's number
         drip = divmod(spigotArray[0], 2)
-        spigotArray[0] = int(drip[1])
+        spigotArray[0] = drip[1]
         print(drip[0])
 
 
